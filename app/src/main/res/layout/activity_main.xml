@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#000000"
+    android:foregroundTint="#000000"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00817D"
+        android:theme="@style/Theme.Leagues.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#00817D"
+            android:gravity="center"
+            android:minHeight="?actionBarSize"
+            android:padding="@dimen/appbar_padding"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/responseView"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="#FDFDFD"
+            android:text="Loading, please wait..."
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/matchesView"
+            android:layout_width="wrap_content"
+            android:layout_height="570dp"
+            android:background="#FDFDFD"
+            android:textColor="@color/black"
+            android:maxLines = "33"
+            android:scrollbars="vertical"
+            android:scrollbarAlwaysDrawVerticalTrack="true"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00817D"
+            android:backgroundTint="#009994"
+            android:text="Refresh"
+            android:textColor="@color/black"
+            app:icon="@android:drawable/stat_notify_sync" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
